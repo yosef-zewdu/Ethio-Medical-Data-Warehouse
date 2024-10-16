@@ -1,0 +1,5 @@
+outs:
+- md5: 689737aa512248a5a44ca10c9d7bbfb6
+  size: 70459
+  hash: md5
+  path: yetenaweg_data.csv
