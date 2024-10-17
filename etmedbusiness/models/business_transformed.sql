@@ -27,19 +27,12 @@ business_data AS (
         id,
         channel_username,
         date,
-        -- Extract product (assuming product name comes before 'Price')
-        -- SUBSTRING(message FROM '(.*?)Price') AS product,
-        CASE 
-            WHEN POSITION('Price' IN message) > 0 THEN 
-                SUBSTRING(message FROM '(.*?)Price')  -- Extracts the product when price exists
-            ELSE 
-                SUBSTRING(message FROM '^(.*?)(\n|$)')  -- Extracts the first line if no price
-        END AS product,
-        -- Extract price (assuming price is a number followed by 'birr')
+        -- Extract product
+        SUBSTRING(message FROM '^(.*?)(\n|$)') As product,
+        -- Extract price 
         SUBSTRING(message FROM 'Price\s*([0-9]+(?:,?[0-9]*)(?:\.\d+)?)') AS price,
-        
-        -- Extract address (assuming address starts after 'Adress:-' or 'Address:-')
-        SUBSTRING(message FROM '(?:Adress|Address):-\s*(.+)') AS address
+        -- Extract address 
+        SUBSTRING(message FROM '(?:Adress|Address):-\s*(.+?school)') AS address
     FROM lobelia_data
 
 )
