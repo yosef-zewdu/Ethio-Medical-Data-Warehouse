@@ -17,3 +17,4 @@ notebooks structure
 
 ```
 export_to_postgres.ipynb                                # exporting scrapped data to postgres
+yollo.ipynb                                             # notebook for object detection
