@@ -5,3 +5,8 @@ scripts/__pycache__
 ph
 logs
 app/__pycache__
+photos
+yolov5
+detection_results
+p
+notebooks/yolov5s.pt
