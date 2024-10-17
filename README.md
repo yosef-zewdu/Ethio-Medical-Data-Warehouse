@@ -17,7 +17,7 @@ This project involves building a complete data pipwarehouseeline to scrape, clea
 
 ```plaintext
 
-bank-credit-scoring/
+Ethio-Medical-Data-Warehouse/
 ├── .vscode/
 │   └── settings.json
 ├── .github/
@@ -26,21 +26,20 @@ bank-credit-scoring/
 ├── src/
 │   └── __init__.py
 ├── notebooks/
-|   ├── eda.ipynb                       # Jupyter notebook for data cleaning and processing 
-|   ├── feature_eng.ipynb                      # Jupyter notebook for feature engineering
-│   └── README.md                       # Description of notebooks directory 
+|   ├── to_postgres.ipynb                        # Jupyter notebook for exporting to postgres
+|   ├── yollo.ipynb                              # Jupyter notebook for object detection
+│   └── README.md                                # Description of notebooks directory 
 ├── tests/
 │   └── __init__.py
 ├── scripts/
 |    ├── __init__.py
 │    ├── tl_scrapper.py                          # Script data processing, cleaning 
-|    ├── dbt.py                                  # Script feature engineering
 │    └── README.md                               # Description of scripts directory
 │
-├── requirements.txt        # Python dependencies
-├── README.md               # Project documentation
-├── LICENSE                 # License information
-└── .gitignore              # Files and directories to ignore in Git  
+├── requirements.txt                             # Python dependencies
+├── README.md                                    # Project documentation
+├── LICENSE                                      # License information
+└── .gitignore                                   # Files and directories to ignore in Git  
 ```
 
 ## Setup
@@ -54,7 +53,7 @@ bank-credit-scoring/
 2. Create a virtual environment:
    ```bash
    python -m venv venv
-   source venv\Scripts\activate  # On Linux, use `venv/bin/activate`
+   venv\Scripts\activate  # On Linux, use `source venv/bin/activate`
    
 
 3. Install the required packages:

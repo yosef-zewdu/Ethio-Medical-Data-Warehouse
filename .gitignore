@@ -1,3 +1,6 @@
 .env
 photos
-data
+medbusiness
+scripts/__pycache__
+ph
+logs

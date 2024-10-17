@@ -1,0 +1,44 @@
+version: 2
+
+sources:
+  - name: public
+    schema: public
+    tables:
+      - name: medbusiness
+
+models:
+  - name: business_transformed
+    description: "Transformed data for the Lobelia cosmetics channel, including extracted product, price, and address."
+    columns:
+      - name: id
+        description: "Unique identifier for each message."
+        data_tests:
+          - not_null
+          - unique
+      
+      - name: channel_username
+        description: "The username of the Telegram channel without the '@' symbol."
+        data_tests:
+          - not_null
+      
+      - name: date
+        description: "The date of the message, formatted as YYYY-MM-DD, without the time component."
+        data_tests:
+          - not_null
+          
+      - name: product
+        description: "Extracted product name from the message content."
+        data_tests:
+          - not_null
+      
+      - name: price
+        description: "Extracted price of the product from the message, in birr."
+        data_tests:
+          - not_null
+      
+      - name: address
+        description: "Extracted address from the message content."
+        data_tests:
+          - not_null
+
+      
